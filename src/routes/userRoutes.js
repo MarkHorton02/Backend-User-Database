@@ -15,6 +15,7 @@ const checkToken = require("../middleware/checkToken");
 const hashPassword = require("../middleware/hashPassword");
 const checkPassword = require("../middleware/checkPassword");
 
+// Setting up endpoints and what functions they run
 userRouter.post("/users/register", hashPassword, registerUser);
 userRouter.get("/users/listUsers", checkToken, listUsers);
 userRouter.delete("/users/deleteUser", checkToken, deleteUser);
