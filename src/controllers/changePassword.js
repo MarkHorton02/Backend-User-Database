@@ -22,11 +22,13 @@ const changePassword = async (req, res) => {
     // Update the record with the new password
 
     console.log(result);
-    res.status(200).json({message: "Password updated", results: result});
+    res.status(200).json({ message: "Password updated", results: result });
     // Successful user registration message. Returns the user details
   } catch (error) {
     console.log(error);
-    res.status(500).json({message: "Password failed to update", error: error});
+    res
+      .status(500)
+      .json({ message: "Password failed to update", error: error });
     // Error message with information
   }
 };

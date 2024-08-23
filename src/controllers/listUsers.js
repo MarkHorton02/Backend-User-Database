@@ -13,7 +13,7 @@ const listUsers = async (req, res) => {
     // Respond with the list
   } catch (error) {
     console.log(error);
-    res.status(500).json({error: error});
+    res.status(500).json({ error: error });
     // Error message with information
   }
 };
