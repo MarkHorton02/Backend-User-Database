@@ -7,6 +7,8 @@ const app = express(); // Assigns name of "app"
 app.use(express.json()); // API allowing for communication to database
 const User = require("./db/models/userModel"); // Import the model
 const userRouter = require("./routes/userRoutes"); // Import the router
+const cors = require("cors"); // Import cors
+app.use(cors());
 
 const port = process.env.PORT || 5002;
 // Import the port number from .env, if fails then 5002

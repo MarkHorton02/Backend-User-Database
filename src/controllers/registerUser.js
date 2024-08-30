@@ -11,7 +11,7 @@ const registerUser = async (req, res) => {
     });
     // Create new user with above fields (typed by user)
 
-    res.status(200).send(`User ${req.body.username} has been created`);
+    res.status(200).json({message: `User ${req.body.username} has been created`});
     // Successful user registration message
   } catch (error) {
     console.log(error);

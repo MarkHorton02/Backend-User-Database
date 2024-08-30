@@ -3,7 +3,13 @@
 const { Sequelize } = require("sequelize");
 // Importing Sequelize method from the Sequelize library
 
-const SQLConnection = new Sequelize(process.env.MYSQL_URI);
+const SQLConnection = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
+  {host: process.env.DB_HOST,
+  dialect: process.env.DIALECT}
+);
 // Grabs the URI from .env for the connection, assigns name SQLConnection
 
 try {

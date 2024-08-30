@@ -6,6 +6,7 @@ const hashPassword = async (req, res, next) => {
   try {
     plainTextPassword = req.body.password;
     // Assign the given password the name plainTextPassword
+
     saltRounds = parseInt(process.env.SALT_ROUNDS);
     // Importing the number of salt rounds from .env, and converting to an integer
 
